@@ -23,15 +23,15 @@ def two_into_one(list1, list2):
 
 def build_df(number):
     #load the history files and return a dataframe from them
-    with open('../scraper/days'+str(number)+'.txt') as file:
+    with open('../scraper/days/days'+str(number)+'.txt') as file:
         days = file.read()
-    with open('../scraper/horas'+str(number)+'.txt') as file:
+    with open('../scraper/horas/horas'+str(number)+'.txt') as file:
         horas = file.read()
-    with open('../scraper/names'+str(number)+'.txt') as file:
+    with open('../scraper/names/names'+str(number)+'.txt') as file:
         names = file.read()
-    with open('../scraper/price'+str(number)+'.txt') as file:
+    with open('../scraper/price/price'+str(number)+'.txt') as file:
         price = file.read()
-    with open('../scraper/winner'+str(number)+'.txt') as file:
+    with open('../scraper/winner/winner'+str(number)+'.txt') as file:
         winner = file.read()
 
     regex = re.compile(r'R\$ \d+,\d{2}')
@@ -59,7 +59,7 @@ def build_df(number):
             'price':price_list}
 
     df = pd.DataFrame(df_dict)
-    df.to_csv('lance_df'+str(number)+'.csv')
+    df.to_csv('./lance_df/lance_df'+str(number)+'.csv')
 
 def wrangling(df_number):
     """takes the csv number adn wrangles the dataframe"""

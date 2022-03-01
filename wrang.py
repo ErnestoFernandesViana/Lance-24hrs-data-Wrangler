@@ -2,15 +2,15 @@ from functions import str_into_list
 from functions import build_df
 import re
 
-with open('../scraper/days'+str(1)+'.txt') as file:
+with open('../scraper/days/days'+str(1)+'.txt') as file:
     days = file.read()
-with open('../scraper/horas'+str(1)+'.txt') as file:
+with open('../scraper/horas/horas'+str(1)+'.txt') as file:
     horas = file.read()
-with open('../scraper/names'+str(1)+'.txt') as file:
+with open('../scraper/names/names'+str(1)+'.txt') as file:
     names = file.read()
-with open('../scraper/price'+str(1)+'.txt') as file:
+with open('../scraper/price/price'+str(1)+'.txt') as file:
     price = file.read()
-with open('../scraper/winner'+str(1)+'.txt') as file:
+with open('../scraper/winner/winner'+str(1)+'.txt') as file:
     winner = file.read()
 
 
